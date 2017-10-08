@@ -2,6 +2,7 @@ package <%= packageName %>.support.di;
 
 import android.content.Context;
 
+import <%= packageName %>.application.GetStarterData;
 import <%= packageName %>.application.MainPresenter;
 import <%= packageName %>.domain.StarterDataRepository;
 import <%= packageName %>.infraestructure.DummyStarterDataRepository;
@@ -22,12 +23,17 @@ public class AppModule {
     }
 
     @Provides
-    MainPresenter mainPresenter(StarterDataRepository starterDataRepository) {
-        return new MainPresenter(starterDataRepository);
+    MainPresenter mainPresenter(GetStarterData getStarterData) {
+        return new MainPresenter(getStarterData);
     }
 
     @Provides
     StarterDataRepository starterDataRepository() {
         return new DummyStarterDataRepository(context);
+    }
+
+    @Provides
+    GetStarterData getStarterData(StarterDataRepository starterDataRepository) {
+        return new GetStarterData(starterDataRepository);
     }
 }
