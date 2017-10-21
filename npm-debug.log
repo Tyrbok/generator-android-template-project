@@ -1,0 +1,134 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.2
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/jesus/projects/personal/android-starter/generator-android-template-project',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/jesus/.npm/generator-android-template-project/0.3.0/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/jesus/.npm correctMkdir not in flight; initializing
+10 info lifecycle generator-android-template-project@0.3.0~prepublish: generator-android-template-project@0.3.0
+11 verbose lifecycle generator-android-template-project@0.3.0~prepublish: unsafe-perm in lifecycle true
+12 verbose lifecycle generator-android-template-project@0.3.0~prepublish: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/jesus/projects/personal/android-starter/generator-android-template-project/node_modules/.bin:/Users/jesus/.rvm/gems/ruby-2.4.1/bin:/Users/jesus/.rvm/gems/ruby-2.4.1@global/bin:/Users/jesus/.rvm/rubies/ruby-2.4.1/bin:/usr/local/php5/bin:/Users/jesus/install/bin:/.composer/vendor/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/jesus/.rvm/gems/ruby-2.4.1/bin:/Users/jesus/.rvm/gems/ruby-2.4.1@global/bin:/Users/jesus/.rvm/rubies/ruby-2.4.1/bin:/usr/local/php5/bin:/Users/jesus/install/bin:/.composer/vendor/bin:/Users/jesus/Library/Android/sdk/platform-tools:/Users/jesus/Library/Android/sdk/tools:/Users/jesus/.fastlane/bin/:/Users/jesus/.rvm/bin:/Users/jesus/Library/Android/sdk/platform-tools:/Users/jesus/Library/Android/sdk/tools:/Users/jesus/.fastlane/bin/:/Users/jesus/.rvm/bin:/Users/jesus/.rvm/bin
+13 verbose lifecycle generator-android-template-project@0.3.0~prepublish: CWD: /Users/jesus/projects/personal/android-starter/generator-android-template-project
+14 silly lifecycle generator-android-template-project@0.3.0~prepublish: Args: [ '-c', 'nsp check' ]
+15 silly lifecycle generator-android-template-project@0.3.0~prepublish: Returned: code: 0  signal: null
+16 verbose tar pack [ '/Users/jesus/.npm/generator-android-template-project/0.3.0/package.tgz',
+16 verbose tar pack   '/Users/jesus/projects/personal/android-starter/generator-android-template-project' ]
+17 verbose tarball /Users/jesus/.npm/generator-android-template-project/0.3.0/package.tgz
+18 verbose folder /Users/jesus/projects/personal/android-starter/generator-android-template-project
+19 verbose addLocalTarball adding from inside cache /Users/jesus/.npm/generator-android-template-project/0.3.0/package.tgz
+20 verbose correctMkdir /Users/jesus/.npm correctMkdir not in flight; initializing
+21 silly cache afterAdd generator-android-template-project@0.3.0
+22 verbose afterAdd /Users/jesus/.npm/generator-android-template-project/0.3.0/package/package.json not in flight; writing
+23 verbose correctMkdir /Users/jesus/.npm correctMkdir not in flight; initializing
+24 verbose afterAdd /Users/jesus/.npm/generator-android-template-project/0.3.0/package/package.json written
+25 silly publish { name: 'generator-android-template-project',
+25 silly publish   version: '0.3.0',
+25 silly publish   description: 'Android Yeoman Generator',
+25 silly publish   homepage: 'https://github.com/tyrbok/generator-android-template-project#readme',
+25 silly publish   author: { name: 'Jesus Serrano' },
+25 silly publish   files: [ 'generators' ],
+25 silly publish   main: 'generators/index.js',
+25 silly publish   keywords: [ 'yeoman-generator' ],
+25 silly publish   devDependencies:
+25 silly publish    { 'yeoman-test': '^1.6.0',
+25 silly publish      'yeoman-assert': '^3.0.0',
+25 silly publish      coveralls: '^3.0.0',
+25 silly publish      nsp: '^2.6.3',
+25 silly publish      eslint: '^4.1.0',
+25 silly publish      'eslint-config-xo-space': '^0.16.0',
+25 silly publish      jest: '^21.2.1',
+25 silly publish      'jest-cli': '^21.2.1' },
+25 silly publish   dependencies:
+25 silly publish    { chalk: '^2.1.0',
+25 silly publish      mkdirp: '^0.5.1',
+25 silly publish      nodegit: '^0.20.1',
+25 silly publish      replace: '^0.3.0',
+25 silly publish      rimraf: '^2.6.1',
+25 silly publish      'yeoman-generator': '^2.0.1',
+25 silly publish      yosay: '^2.0.0' },
+25 silly publish   jest: { testEnvironment: 'node' },
+25 silly publish   scripts:
+25 silly publish    { prepublish: 'nsp check',
+25 silly publish      pretest: 'eslint . --fix',
+25 silly publish      test: 'jest' },
+25 silly publish   eslintConfig: { extends: 'xo-space', env: { jest: true, node: true } },
+25 silly publish   repository:
+25 silly publish    { type: 'git',
+25 silly publish      url: 'git+https://github.com/tyrbok/generator-android-template-project.git' },
+25 silly publish   license: 'MIT',
+25 silly publish   readme: '# Android Java/Kotlin Generator Template [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] \n<!-- [![Coverage percentage][coveralls-image]][coveralls-url] -->\n> Android app generator using: \n> \n> * https://github.com/Tyrbok/Android-Starter-Java\n> * https://github.com/Tyrbok/Android-Starter-Kotin\n\n## Installation\n\nFirst, install [Yeoman](http://yeoman.io) and generator-android-template-project using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).\n\n```bash\nnpm install -g yo\nnpm install -g generator-android-template-project\n```\n\nThen generate your new project:\n\n```bash\nyo android-template-project\n```\n\n## License\n\nMIT © [Jesus Serrano]()\n\n[npm-image]: https://badge.fury.io/js/generator-android-template-project.svg\n[npm-url]: https://npmjs.org/package/generator-android-template-project\n[travis-image]: https://travis-ci.org/Tyrbok/generator-android-template-project.svg?branch=master\n[travis-url]: https://travis-ci.org/Tyrbok/generator-android-template-project\n[daviddm-image]: https://david-dm.org/Tyrbok/generator-android-template-project.svg?theme=shields.io\n[daviddm-url]: https://david-dm.org/Tyrbok/generator-android-template-project\n[coveralls-image]: https://coveralls.io/repos/Tyrbok/generator-android-template-project/badge.svg\n[coveralls-url]: https://coveralls.io/r/Tyrbok/generator-android-template-project\n',
+25 silly publish   readmeFilename: 'README.md',
+25 silly publish   gitHead: '629f27321a0e3dde8779fc4e1c8e2702ebcca637',
+25 silly publish   bugs: { url: 'https://github.com/tyrbok/generator-android-template-project/issues' },
+25 silly publish   _id: 'generator-android-template-project@0.3.0',
+25 silly publish   _shasum: '5bc668ca9e6e36600938c9737acdc35ed5346a17',
+25 silly publish   _from: '.' }
+26 verbose getPublishConfig undefined
+27 silly mapToRegistry name generator-android-template-project
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry https://registry.npmjs.org/
+30 silly mapToRegistry data Result {
+30 silly mapToRegistry   raw: 'generator-android-template-project',
+30 silly mapToRegistry   scope: null,
+30 silly mapToRegistry   escapedName: 'generator-android-template-project',
+30 silly mapToRegistry   name: 'generator-android-template-project',
+30 silly mapToRegistry   rawSpec: '',
+30 silly mapToRegistry   spec: 'latest',
+30 silly mapToRegistry   type: 'tag' }
+31 silly mapToRegistry uri https://registry.npmjs.org/generator-android-template-project
+32 verbose publish registryBase https://registry.npmjs.org/
+33 silly publish uploading /Users/jesus/.npm/generator-android-template-project/0.3.0/package.tgz
+34 verbose request uri https://registry.npmjs.org/generator-android-template-project
+35 verbose request sending authorization for write operation
+36 info attempt registry request try #1 at 5:44:02 PM
+37 verbose request using bearer token for auth
+38 verbose request id cddc0d1910b08490
+39 http request PUT https://registry.npmjs.org/generator-android-template-project
+40 http 403 https://registry.npmjs.org/generator-android-template-project
+41 verbose headers { 'content-type': 'application/json',
+41 verbose headers   'cache-control': 'max-age=300',
+41 verbose headers   'content-length': '91',
+41 verbose headers   'accept-ranges': 'bytes',
+41 verbose headers   date: 'Sat, 21 Oct 2017 15:44:03 GMT',
+41 verbose headers   via: '1.1 varnish',
+41 verbose headers   connection: 'keep-alive',
+41 verbose headers   'x-served-by': 'cache-mad9428-MAD',
+41 verbose headers   'x-cache': 'MISS',
+41 verbose headers   'x-cache-hits': '0',
+41 verbose headers   'x-timer': 'S1508600643.511970,VS0,VE1424',
+41 verbose headers   vary: 'Accept-Encoding, Accept' }
+42 verbose request invalidating /Users/jesus/.npm/registry.npmjs.org/generator-android-template-project on PUT
+43 error publish Failed PUT 403
+44 verbose stack Error: You cannot publish over the previously published version 0.3.0. : generator-android-template-project
+44 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+44 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+44 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+44 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:187:22)
+44 verbose stack     at emitTwo (events.js:106:13)
+44 verbose stack     at Request.emit (events.js:191:7)
+44 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+44 verbose stack     at emitOne (events.js:96:13)
+44 verbose stack     at Request.emit (events.js:188:7)
+44 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:969:12)
+45 verbose statusCode 403
+46 verbose pkgid generator-android-template-project
+47 verbose cwd /Users/jesus/projects/personal/android-starter/generator-android-template-project
+48 error Darwin 16.7.0
+49 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+50 error node v6.11.2
+51 error npm  v3.10.10
+52 error code E403
+53 error You cannot publish over the previously published version 0.3.0. : generator-android-template-project
+54 error If you need help, you may report this error at:
+54 error     <https://github.com/npm/npm/issues>
+55 verbose exit [ 1, true ]
