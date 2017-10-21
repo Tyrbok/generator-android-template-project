@@ -1,6 +1,9 @@
-# generator-android-template-project [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] 
+# Android Java/Kotlin Generator Template [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] 
 <!-- [![Coverage percentage][coveralls-image]][coveralls-url] -->
-> Android app generator using: https://github.com/Tyrbok/Android-Starter-Java
+> Android app generator using: 
+> 
+> * https://github.com/Tyrbok/Android-Starter-Java
+> * https://github.com/Tyrbok/Android-Starter-Kotin
 
 ## Installation
 

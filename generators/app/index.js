@@ -11,12 +11,12 @@ module.exports = class extends Generator {
     ));
 
     const prompts = [
-      // {
-      //   type: 'confirm',
-      //   name: 'someAnswer',
-      //   message: 'Would you like to enable this option?',
-      //   default: true
-      // },
+      {
+        type: 'list',
+        name: 'lang',
+        message: 'Application Language',
+        choices: ['Java', 'Kotlin']
+      },
       {
         name: 'projectName',
         message: 'Project Name',
@@ -36,7 +36,10 @@ module.exports = class extends Generator {
   }
 
   writing() {
-    var appFolder = 'java';
+    var appLanguage = this.props.lang;
+
+    var appFolder = (appLanguage === 'Java') ? 'java' : 'kotlin';
+    var appBasePagackageName = (appLanguage === 'Java') ? 'androidstarterjava' : 'androidstarterkotlin';
     var packageDir = this.props.packageName.replace(/\./g, '/');
 
     var projectFolder = this.props.projectName;
@@ -71,9 +74,9 @@ module.exports = class extends Generator {
     this.fs.copyTpl(appPath + 'README.md', 'README.md', this.props);
     this.fs.copyTpl(appPath + 'app/src/main/AndroidManifest.xml', 'app/src/main/AndroidManifest.xml', this.props);
 
-    this.fs.copyTpl(appPath + 'app/src/main/java/org/onepointzero/androidstarterjava', 'app/src/main/java/' + packageDir, this.props);
-    this.fs.copyTpl(appPath + 'app/src/androidTest/java/org/onepointzero/androidstarterjava', 'app/src/androidTest/java/' + packageDir, this.props);
-    this.fs.copyTpl(appPath + 'app/src/test/java/org/onepointzero/androidstarterjava', 'app/src/test/java/' + packageDir, this.props);
+    this.fs.copyTpl(appPath + 'app/src/main/java/org/onepointzero/' + appBasePagackageName, 'app/src/main/java/' + packageDir, this.props);
+    this.fs.copyTpl(appPath + 'app/src/androidTest/java/org/onepointzero/' + appBasePagackageName, 'app/src/androidTest/java/' + packageDir, this.props);
+    this.fs.copyTpl(appPath + 'app/src/test/java/org/onepointzero/' + appBasePagackageName, 'app/src/test/java/' + packageDir, this.props);
 
     this.fs.copyTpl(appPath + 'app/src/main/res/layout', 'app/src/main/res/layout', this.props);
     this.fs.copyTpl(appPath + 'app/src/main/res/values', 'app/src/main/res/values', this.props);
