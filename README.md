@@ -3,7 +3,7 @@
 > Android app generator using: 
 > 
 > * https://github.com/Tyrbok/Android-Starter-Java
-> * https://github.com/Tyrbok/Android-Starter-Kotin
+> * https://github.com/Tyrbok/Android-Starter-Kotlin
 
 ## Installation
 
