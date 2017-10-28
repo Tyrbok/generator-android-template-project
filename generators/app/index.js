@@ -3,11 +3,12 @@ const Generator = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
 const mkdirp = require('mkdirp');
+const pjson = require('../../package.json');
 
 module.exports = class extends Generator {
   prompting() {
     this.log(yosay(
-      'Welcome to the primo ' + chalk.red('generator-android-template-project') + ' generator!'
+      'Welcome to ' + chalk.red('Android Template Project') + ' ' + pjson.version + ' generator!'
     ));
 
     const prompts = [
