@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 class MainActivity : AppCompatActivity(), MainScreen {
 
-    val component by lazy { app.component }
+    private val component by lazy { app.component }
 
     @Inject lateinit var presenter: MainPresenter
 
@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity(), MainScreen {
 
         component.inject(this)
         presenter.bind(this)
-
     }
 
     override fun printText(text: String) {
