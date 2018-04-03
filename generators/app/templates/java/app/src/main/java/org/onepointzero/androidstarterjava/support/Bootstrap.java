@@ -9,17 +9,22 @@ import <%= packageName %>.support.di.AppModule;
 import <%= packageName %>.support.di.DaggerAppComponent;
 
 public class Bootstrap extends Application {
-    AppModule appModule;
+    AppComponent component;
 
     @Override
     public void onCreate() {
         super.onCreate();
 
-        appModule = new AppModule(this.getApplicationContext(), getConfiguration());
+        AppModule appModule = new AppModule(this.getApplicationContext(), getConfiguration());
+        component = DaggerAppComponent.builder().appModule(appModule).build();
     }
 
     public AppComponent getComponent() {
-        return DaggerAppComponent.builder().appModule(appModule).build();
+        return component;
+    }
+
+    public void setComponent(AppComponent component) {
+        this.component = component;
     }
 
     public Configuration getConfiguration() {

@@ -23,17 +23,17 @@ public class AppModule {
     }
 
     @Provides
-    MainPresenter mainPresenter(GetStarterData getStarterData) {
+    public MainPresenter mainPresenter(GetStarterData getStarterData) {
         return new MainPresenter(getStarterData);
     }
 
     @Provides
-    StarterDataRepository starterDataRepository() {
+    public StarterDataRepository starterDataRepository() {
         return new DummyStarterDataRepository(context);
     }
 
     @Provides
-    GetStarterData getStarterData(StarterDataRepository starterDataRepository) {
+    public GetStarterData getStarterData(StarterDataRepository starterDataRepository) {
         return new GetStarterData(starterDataRepository);
     }
 }

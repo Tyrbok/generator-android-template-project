@@ -35,4 +35,10 @@ public class MainActivity extends AppCompatActivity implements MainScreen {
     public void showLabel(String message) {
         labelMain.setText(message);
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        presenter.unbind();
+    }
 }
